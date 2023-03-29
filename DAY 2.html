@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 2</title>
+    <title>Day 2-3</title>
     <style>
         button{
             width: 100%;
+            border: none;
+        }
+        .red{
+            background-color: red;
+            color: white;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .operator{
+            background-color: orange;
+        }
+
+        .operator2{
+            background-color: black;
+            color: white;
         }
     </style>
 </head>
@@ -17,14 +33,14 @@
             <th colspan="4"><input type="text" name="display"></th>
         </tr>
         <tr>
-            <td>
-                <button>AC</button>
+            <td colspan="2">
+                <button class="red">AC</button>
             </td>
             <td>
-                <button>C</button>
+                <button class="blue">C</button>
             </td>
             <td>
-                <button>/</button>
+                <button class="operator">*</button>
             </td>
         </tr>
         <tr>
@@ -38,7 +54,7 @@
                 <button>9</button>
             </td>
             <td>
-                <button>+</button>
+                <button class="operator">/</button>
             </td>
         </tr>
         <tr>
@@ -52,7 +68,7 @@
                 <button>6</button>
             </td>
             <td>
-                <button>+</button>
+                <button class="operator">+</button>
             </td>
         </tr>
         <tr>
@@ -66,18 +82,18 @@
                 <button>3</button>
             </td>
             <td>
-                <button>-</button>
+                <button class="operator">-</button>
             </td>
         </tr>
         <tr>
             <td>
-                <button>+-</button>
+                <button class="operator2">+-</button>
             </td>
             <td>
                 <button>0</button>
             </td>
             <td>
-                <button>.</button>
+                <button class="operator2">.</button>
             </td>
             <td>
                 <button>=</button>

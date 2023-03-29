@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px;
+            grid-gap: 5px;
+        }
+        input{
+            grid-column: 1/ span 4;
+            padding: 10px;
+        }
+        button{
+            width: 100%;
+            border: none;
+            padding: 15px;
+        }
+        .AC{
+            grid-column: 1/ span 2;
+            background-color: rgb(250, 96, 96);
+            color: white;
+        }
+        .C{
+            background-color: rgb(255, 255, 122);
+        }
+        .operator{
+            background-color: rgb(255, 209, 123);
+        }
+
+        .operator2{
+            background-color: rgb(171, 171, 255);
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="grid-container">
+        <input type="text" name="display" id="display">
+        <button class="AC">AC</button>
+        <button class="C">C</button>
+        <button class="operator">*</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operator">/</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="operator">+</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="operator">-</button>
+        <button class="operator2">+-</button>
+        <button>0</button>
+        <button>.</button>
+        <button class="operator2">=</button>
+    </div>
+</body>
+</html>
