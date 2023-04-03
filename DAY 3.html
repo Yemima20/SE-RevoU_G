@@ -14,11 +14,13 @@
         input{
             grid-column: 1/ span 4;
             padding: 10px;
+            text-align: end;
         }
         button{
             width: 100%;
             border: none;
             padding: 15px;
+            cursor: pointer;
         }
         .AC{
             grid-column: 1/ span 2;
@@ -42,25 +44,57 @@
 <body>
     <div class="grid-container">
         <input type="text" name="display" id="display">
-        <button class="AC">AC</button>
-        <button class="C">C</button>
-        <button class="operator">*</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="operator">/</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="operator">+</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="operator">-</button>
-        <button class="operator2">+-</button>
-        <button>0</button>
-        <button>.</button>
-        <button class="operator2">=</button>
+        <button class="AC" id="clear-all">AC</button>
+        <button class="C" id="clear">C</button>
+        <button value="" class="operator">*</button>
+
+        <button value="7" class="numbers">7</button>
+        <button value="8" class="numbers">8</button>
+        <button value="9" class="numbers">9</button>
+
+        <button value="" class="operator">/</button>
+
+        <button value="4" class="numbers">4</button>
+        <button value="5" class="numbers">5</button>
+        <button value="6" class="numbers">6</button>
+
+        <button value="" class="operator">+</button>
+
+        <button value="1" class="numbers">1</button>
+        <button value="2" class="numbers">2</button>
+        <button value="3" class="numbers">3</button>
+
+        <button value="" class="operator">-</button>
+        <button value="" class="operator2">+-</button>
+
+        <button value="0" class="numbers">0</button>
+
+        <button value="">.</button>
+
+        <button value="" class="operator2">=</button>
     </div>
+    <script>
+        var inputLabel = document.getElementById("display");
+        var numbers = document.getElementsByClassName("numbers");
+        var clearAll = document.getElementById("clear-all");
+        var clear = document.getElementById("clear");
+
+        // console.log("numbers:", numbers.length)
+        for(let i = 0; i < numbers.length; i++){
+            numbers[i].addEventListener("click", function(){
+                var pushed = this.value;
+                inputLabel.value = inputLabel.value + pushed;
+            })
+        }
+
+        clearAll.addEventListener("click", function(){ //AC
+            inputLabel.value = "";
+        })
+
+        clear.addEventListener("click", function(){                         //C
+            var maxLength = inputLabel.value.length;
+            inputLabel.value = inputLabel.value.substr(0, maxLength - 1)
+        })
+    </script>
 </body>
 </html>
